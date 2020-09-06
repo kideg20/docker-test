@@ -1,6 +1,9 @@
 #!groovy
 //check properties
-properties ([disableConcurrentBuilds()], [pipelineTriggers([githubPush()])])
+properties (
+  [disableConcurrentBuilds()],
+  [pipelineTriggers([githubPush()])]
+)
 
 pipeline {
   agent {
