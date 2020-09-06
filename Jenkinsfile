@@ -10,7 +10,7 @@ pipeline {
     timestamps()
   }
   stages {
-    stage("Log in to docker") {
+    stage("DEV") {
       steps {
           sh 'ssh root@docker \'hostname\''
       }
