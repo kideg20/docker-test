@@ -12,9 +12,7 @@ pipeline {
   stages {
     stage("Log in to docker") {
       steps {
-        step {
           sh 'ssh root@docker \'hostname\''
-        }
       }
     }
   }
