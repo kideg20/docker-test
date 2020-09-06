@@ -1,8 +1,7 @@
 #!groovy
 //check properties
 properties (
-  [disableConcurrentBuilds()],
-  [pipelineTriggers([githubPush()])]
+  [disableConcurrentBuilds()]
 )
 
 pipeline {
