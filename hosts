@@ -1,0 +1,11 @@
+---
+all:
+  children:
+    centos8:
+      children:
+        docker:
+          hosts:
+            docker:
+        jenkins:
+          hosts:
+            jenkins:
