@@ -14,7 +14,7 @@ pipeline {
   stages {
     stage("DEV") {
       steps {
-          sh 'ssh root@docker \'hostname\''
+          sh 'ssh root@docker "date && time && hostname"'
       }
     }
   }
