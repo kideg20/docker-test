@@ -7,7 +7,6 @@ properties (
 pipeline {
   agent {
     dockerfile true
-    label 'master'
   }
   options {
     timestamps()
