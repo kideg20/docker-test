@@ -1,0 +1,21 @@
+---
+- name: Create www prod stage and test
+  hosts:
+    - docker
+  tasks:
+  - name: Create container www PROD
+    docker_image:
+      build:
+        path: /var/docker/www/
+        pull: no
+      name: www
+      source: build
+  - name: Start container www PROD
+    docker_container:
+      name: www
+      image: www
+      state: started
+      volumes:
+        - "/var/docker/www/html:/usr/local/apache2/htdocs"
+        - "/var/docker/www/logs:/var/log/apache"
+      ports: 80:80
